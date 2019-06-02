@@ -9,7 +9,7 @@ Foi usado Docker, que é uma tecnologia de software que fornece contêineres, pr
 
 O arquivo shell Script foi desenvolvido em Debian Stretch 64 e possui os repositórios e arquivos para esta distribuição
 
-Instruções
+Instruções:
 
 Copie o arquivo para uma pasta
 Dê permissão de execusão usando:
@@ -23,8 +23,8 @@ Em seguida execute
 ```bash
 # sudo ./installtrabalhoSRA.sh
 ```
-Serão instalados o Docker, Docker-Compose, criado o arquivo docker-compose.yml e usado como base para a configuração do container
+Serão instalados o Docker, Docker-Compose, criado o arquivo docker-compose.yml e usado como base para a configuração do contêinere
 
 A instalação não necessita mais interação e deve acabar em poucos minutos de acordo com a velocidade da sua internet
 
-Após o termino esse sistema deve abrir o Wordpress no seu mavegador padrão para que seja começada a instalação padrão
+Após o término esse sistema deve abrir o Wordpress no seu navegador padrão para que seja começada a instalação padrão
