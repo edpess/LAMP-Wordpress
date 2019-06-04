@@ -81,6 +81,30 @@ EOF
 
 docker-compose up -d
 
-#abre o navegador padrão
+#instala PHP 7
 
+sudo apt -y install php php-cgi libapache2-mod-php php-common php-pear php-mbstring 
+
+echo "date.timezone = America/Fortaleza" >> /etc/php/7.0/apache2/php.ini 
+sudo systemctl restart apache2 
+
+sudo mv /var/www/html/index.html /var/www/html/old_index.html
+sudo cat > /var/www/html/index.php <<EOF
+<html>
+<body>
+<h1>Pagina de teste PHP</h1>
+
+<div style="width: 100%; font-size: 40px; font-weight: bold; text-align:center;">
+<?php
+      print Date("d/m/Y");
+?>
+</div>
+</body>
+</html>
+EOF
+
+#abre o navegador padrão a instalação do WordPress
 xdg-open 'http://127.0.0.1:8000'
+
+#abre o navegador padrão uma página teste do PHP Apache 
+xdg-open 'http://127.0.0.1'
